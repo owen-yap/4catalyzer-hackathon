@@ -1,0 +1,6 @@
+[submodule ".frontend"]
+	path = .frontend
+	url = https://github.com/owen-yap/synthetic-ischemic-stroke-mri
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/owen-yap/synthetic-ischemic-stroke-mri
