@@ -13,8 +13,7 @@ import ResizablePanel from "../../components/ResizablePanel";
 import Toggle from "../../components/Toggle";
 import appendNewToName from "../../utils/appendNewToName";
 import downloadPhoto from "../../utils/downloadPhoto";
-import DropDown from "../../components/DropDown";
-import { roomType, rooms, themeType, themes } from "../../utils/dropdownTypes";
+
 
 // Configuration for the uploader
 const uploader = Uploader({
@@ -25,6 +24,7 @@ const uploader = Uploader({
 
 const options = {
   maxFileCount: 1,
+  multi: true,
   mimeTypes: ["image/jpeg", "image/png", "image/jpg"],
   editor: { images: { crop: false } },
   styles: {
@@ -52,8 +52,6 @@ export default function UploadPage() {
   const [sideBySide, setSideBySide] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [photoName, setPhotoName] = useState<string | null>(null);
-  const [theme, setTheme] = useState<themeType>("Modern");
-  const [room, setRoom] = useState<roomType>("Living Room");
 
   const UploadDropZone = () => (
     <UploadDropzone
@@ -91,6 +89,8 @@ export default function UploadPage() {
     setTimeout(() => {
       setLoading(false);
     }, 1300);
+
+    console.log('success');
   }
 
   return (
