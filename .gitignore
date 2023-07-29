@@ -1,0 +1,8 @@
+# Data files
+/data
+
+# Output files
+/opt
+
+# Hugging FAce
+/diffusers
