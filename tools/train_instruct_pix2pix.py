@@ -54,6 +54,8 @@ from diffusers.utils.import_utils import is_xformers_available
 # Will error if the minimal version of diffusers is not installed. Remove at your own risks.
 check_min_version("0.20.0.dev0")
 
+torch._dynamo.config.verbose=True
+
 logger = get_logger(__name__, log_level="INFO")
 
 DATASET_NAME_MAPPING = {

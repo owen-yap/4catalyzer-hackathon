@@ -7,7 +7,7 @@ import os
 from diffusers import StableDiffusionImg2ImgPipeline
 
 device = "cuda"
-model_id_or_path = "runwayml/stable-diffusion-v1-5"
+model_id_or_path = "./opt/model_index.json"
 pipe = StableDiffusionImg2ImgPipeline.from_pretrained(model_id_or_path, torch_dtype=torch.float16)
 pipe = pipe.to(device)
 
